@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #f6b93b;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    background: url("food1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+  }
+  .navbar .logo {
+  margin-top: 40px;
+ 
+  border-radius: 50%;
+   
+  }
+  .navbar .logo .image-rond{
+    border:none;
+    border-radius: 50%;
+    
+  }
+
+  @keyframes movedown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+  
+  .navbar ul {
+    list-style: none;
+  }
+
+  
+  .navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+    margin-top: 23px;
+  }
+ 
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    font-size: 22px;
+  }
+
+   .navbar ul li ul.menu li{
+    display: block;
+    margin-top: 4%;
+  }
+  .navbar ul li ul.menu{
+    
+    position: relative;
+    width: 15%;
+    border-radius: 5%;
+    background: var(--bg-color);
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .navbar ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+  }
+  .navbar ul li:hover ul.menu{
+    display: block;
+  }
+  
+  .hero-text {
+    color: white;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  .hero-text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
+  }
+  
+  .hero-text a {
+    color: white;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    text-decoration: none;
+    transition: opacity 250ms linear;
+  }
+  
+  .hero-text a:hover {
+    opacity: 0.8;
+  }
+  
+  .hero-text h2 {
+    font-size: var(--head);
+    border-bottom: 4px dotted var(--bg-color);
+  }
+  
+  .hero-text p {
+    font-size: 3rem;
+  }
+  .chek{
+    position: absolute;
+    width: 500px;
+    height: 280px;
+    background: transparent;
+    padding:150px 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    top:71%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+    height: 40vh;
+    
+
+}
+.chek h3{
+    position: absolute;
+    top:4%;
+    
+    transform: translate(0%);
+}
+.chek h3.h3{
+    color: #ffffff;
+    font-size: 30px;
+    border-bottom: 4px solid var(--bg-color);
+}
+
+.chek ul {
+    float:right;
+    list-style-type: none;
+     top:60%;
+     position: relative;
+     margin-top: 50px;
+}
+.chek ul li{
+    justify-content: center;
+ 
+}
+  .chek ul li a {
+    color: white;
+    border: 1px solid var(--bg-color);
+    font-weight: 400;
+    font-size: var(--text);
+    padding: 0.6rem 2.8rem;
+    margin: 0.7rem 1rem;
+    display: block;
+    text-decoration: none;
+    transition: opacity 250ms linear;
+    border-radius: 20%;
+    justify-content: center;
+    align-items: center;
+   
+  
+  }
+  
+  .chek ul li a:hover {
+    opacity: 0.8;
+    background-color:var(--bg-color);
+    
+  }
+  

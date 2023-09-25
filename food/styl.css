@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #f6b93b;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    background: #f1ecd8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+  }
+  .navbar .logo {
+  margin-top: 40px;
+ 
+  border-radius: 50%;
+   
+  }
+  .navbar .logo .image-rond{
+    border:none;
+    border-radius: 50%;
+    
+  }
+
+  @keyframes movedown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+  
+  .navbar ul {
+    list-style: none;
+  }
+
+  
+  .navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+    margin-top: 23px;
+  }
+ 
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    font-size: 22px;
+  }
+
+   .navbar ul li ul.menu li{
+    display: block;
+    margin-top: 4%;
+  }
+  .navbar ul li ul.menu{
+    
+    position: relative;
+    width: 15%;
+    border-radius: 5%;
+    background: var(--bg-color);
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .navbar ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+  }
+  .navbar ul li:hover ul.menu{
+    display: block;
+  }
